@@ -3754,13 +3754,47 @@ section {
 
     /* Apply darker glass to cards explicitly */
     .glass-card { 
-        background: var(--gradient-glass) !important; 
-        border: 1px solid var(--glass-border) !important; 
+        background: #14141a !important; 
+        border: 1px solid rgba(255,255,255,0.06) !important; 
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
     }
 
     /* Ensure hero text card also becomes darker */
     .hero-content.hero-card { 
-        background: linear-gradient(180deg, rgba(12,12,16,0.78), rgba(10,10,14,0.72)) !important; 
+        background: #14141a !important; 
+        border: 1px solid rgba(255,255,255,0.06) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Remove glass effect from other components that use blur/transparent glass */
+    .project-card,
+    .story-card,
+    .principles-card,
+    .cta-card,
+    .skill-tile.glass-card,
+    .testi-card,
+    .about-profile.glass-card,
+    .timeline-item { 
+        background: #14141a !important; 
+        border: 1px solid rgba(255,255,255,0.06) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Buttons and controls that had glass blur */
+    .project-open,
+    .carousel-arrow,
+    .nav-btn,
+    .viewer-close { 
+        background: #1a1a22 !important; 
         border: 1px solid rgba(255,255,255,0.08) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
     }
 }
