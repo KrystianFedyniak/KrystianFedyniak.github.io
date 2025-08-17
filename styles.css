@@ -3728,4 +3728,25 @@ section {
 
     /* Slightly darken the hero canvas under content */
     .hero::before { background: rgba(0, 0, 0, 0.5) !important; }
+
+    /* Darker glass variables on mobile only */
+    :root {
+        --gradient-glass: linear-gradient(135deg, rgba(18, 18, 24, 0.72), rgba(8, 8, 12, 0.72));
+        --glass-bg: rgba(15, 15, 20, 0.72);
+        --glass-bg-hover: rgba(18, 18, 24, 0.82);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --glass-border-hover: rgba(255, 255, 255, 0.14);
+    }
+
+    /* Apply darker glass to cards explicitly */
+    .glass-card { 
+        background: var(--gradient-glass) !important; 
+        border: 1px solid var(--glass-border) !important; 
+    }
+
+    /* Ensure hero text card also becomes darker */
+    .hero-content.hero-card { 
+        background: linear-gradient(180deg, rgba(12,12,16,0.78), rgba(10,10,14,0.72)) !important; 
+        border: 1px solid rgba(255,255,255,0.08) !important;
+    }
 }
