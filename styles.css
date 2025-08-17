@@ -3726,8 +3726,22 @@ section {
     /* Make navbar solid/darker for readability */
     .navbar { background: rgba(0, 0, 0, 0.88) !important; }
 
-    /* Slightly darken the hero canvas under content */
-    .hero::before { background: rgba(0, 0, 0, 0.5) !important; }
+    /* Set a solid dark background on html/body */
+    html, body { background: #0b0b12 !important; }
+
+    /* Ensure hero has a real dark overlay */
+    .hero { position: relative; }
+    .hero::before { 
+        content: "";
+        position: absolute; 
+        inset: 0; 
+        background: rgba(0, 0, 0, 0.5) !important; 
+        pointer-events: none;
+    }
+
+    /* Darken mobile menu surfaces */
+    .mobile-menu, 
+    .mobile-menu-content { background: rgba(10, 10, 14, 0.96) !important; }
 
     /* Darker glass variables on mobile only */
     :root {
