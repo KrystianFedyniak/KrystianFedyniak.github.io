@@ -3709,3 +3709,23 @@ section {
     backface-visibility: hidden;
     perspective: 1000px;
 }
+
+/* Mobile-only darker background without affecting desktop */
+@media (max-width: 768px) {
+    /* Remove colorful animated layers to keep background dark */
+    .mesh-gradient,
+    .animated-bg,
+    .gradient-orb,
+    .particle,
+    .floating-element { display: none !important; }
+
+    /* Tone down global glow overlays */
+    body::before,
+    body::after { opacity: 0.15 !important; }
+
+    /* Make navbar solid/darker for readability */
+    .navbar { background: rgba(0, 0, 0, 0.88) !important; }
+
+    /* Slightly darken the hero canvas under content */
+    .hero::before { background: rgba(0, 0, 0, 0.5) !important; }
+}
